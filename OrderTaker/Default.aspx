@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>Commander's Warehouse</h1>
+        <h1>Load Dynamic Business Rule Plugins</h1>
     </div>
 
     <asp:PlaceHolder ID="pldrMessages" runat="server" Visible="false">
@@ -57,7 +57,7 @@
             </tr>
             <tr>
                 <td>Product:</td>
-                <td><asp:DropDownList ID="ddlProduct" runat="server"></asp:DropDownList>&nbsp;<asp:Button ID="btnAddItem" runat="server" Text="Add Item" OnClick="btnAddItem_Click" /></td>
+                <td><asp:DropDownList ID="ddlProduct" runat="server" OnSelectedIndexChanged="ddlProduct_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>&nbsp;<asp:Button ID="btnAddItem" runat="server" Text="Add Item" OnClick="btnAddItem_Click" /></td>
                 <td rowspan="3"><asp:Button ID="btnSubmitOrder" Text="Submit Order" runat="server" OnClick="btnSubmitOrder_Click" /></td>
             </tr>            
             <tr>

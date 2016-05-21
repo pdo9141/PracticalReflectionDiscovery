@@ -178,5 +178,10 @@ namespace OrderTaker
             rptItemsAdded.DataSource = order.OrderItems;
             rptItemsAdded.DataBind();
         }
+
+        protected void ddlProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ltrUnitPrice.Text = products.FirstOrDefault(p => p.ProductName.Equals(ddlProduct.SelectedValue)).Price.ToString("C");
+        }
     }
 }
